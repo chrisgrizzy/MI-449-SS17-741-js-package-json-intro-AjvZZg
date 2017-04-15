@@ -6,12 +6,12 @@
     "dev:sass-watch": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
     "dev": "run-p dev:*",
     "build": "run-s build:*",
-    "build:html": "htmlhint",
-    "build:standard": "standard",
-    "build:sass1": "stylelint 'source/scss/style.scss'",
-    "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
-    "deploy:surge": "surge --project . --domain sassy-project.surge.sh",
-    "deploy": "run-s build:* deploy:surge"
+    "lint:html": "htmlhint",
+    "lint:standard": "standard",
+    "lint:sass1": "stylelint 'source/scss/style.scss'",
+    "lint:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
+    "deploy:surge": "surge --project . --domain https://graha179-kg-tgc7noax99ajvzzg.surge.sh/",
+    "deploy": "run-s lint:* build:* deploy:surge"
   },
   "devDependencies": {
     "htmlhint": "^0.9.13",
