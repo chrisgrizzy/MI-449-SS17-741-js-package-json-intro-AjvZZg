@@ -8,7 +8,7 @@
     "build": "run-s build:sass",
     "lint:html": "htmlhint",
     "lint:standard": "standard",
-    "lint:sass1": "stylelint 'source/scss/styles.scss'",
+    "lint:sass": "stylelint 'source/scss/styles.scss'",
     "build:sass": "node-sass source/scss/styles.scss --output=compiled/css --output-style=compressed --source-map=true",
     "deploy:surge": "surge --project . --domain https://graha179-kg-tgc7noax99ajvzzg.surge.sh/",
     "deploy": "run-s lint:* build:* deploy:surge"
